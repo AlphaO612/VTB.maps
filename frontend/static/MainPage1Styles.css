@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: VTB Group;
+    src: url('VTB Group Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#on_map{
+    z-index: 10;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:fit-content;
+}
+
+header {
+    z-index: 10;
+    position: absolute;
+    height: max-content;
+    width: 100%;
+    background-color: #FFF;
+}
+
+div#container{
+    width : 100%;
+    height: 71px;
+    display: flex;
+    justify-content: end;
+}
+
+
+button#logo{
+    margin: 0% 4% 0% 2%;
+    align-self: center;
+    border: none;
+    background-color: #FFF;
+}
+
+
+html, body, main{
+    height: 100%;
+}
+
+.map {
+    z-index: 1;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #33539B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_map {
+    margin-right: 80%;
+    margin-top: 20%;
+    position: relative;
+    background-color: #FFf;
+    height: 700px;
+    width: 410px;
+    border-radius: 20px;
+    border: 1px solid #0A2896;
+}
+
+#search_line {
+    margin-top: 5%;
+    margin-left: 6%;
+    display: flex;
+    justify-items: space-around;
+    flex-direction: row;
+   
+}
+
+#adress_input {
+    border-radius: 10px;
+    background: #DCE0EB;
+    width: 60%;
+    height: 40px;
+    border: none;
+
+    padding-left: 3%;
+
+    color: #747474;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#settings {
+    width: 25%;
+    border-radius: 10px;
+    background: #DCE0EB;
+    padding: 3%;
+    border: none;
+    margin-left: 5%;
+}
+
+#place_line {
+ display: flex;
+ justify-content: space-around;
+ flex-direction: row;
+ margin-top: 5%;
+}
+
+#office {
+    width: 42%;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 2px solid #33539B;
+    background: #F5F5F5;
+
+    color: #33539B;
+
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 2%;
+}
+
+#cash_machine {
+    border: none;
+    width: 42%;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #33539B;
+
+    color: #F5F5F5;
+
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2%;
+}
+
+.less_then5{
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #747474;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.item_adress_dist_button{
+    border: none;
+    margin-top: 2%;
+}
+
+.item_adress_dist{
+    
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+
+}
+
+.mark_big {
+    border: none;
+    margin-left: 5%;
+}
+
+.adress_text{
+    color: #000;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    align-self: center;
+}
+
+.distance{
+    color: #33539B;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    letter-spacing: 0.36px;
+    align-self: center;
+    margin-right: 5%;
+}
+
+.mark_info{
+    display: flex;
+    flex-direction: row;
+}
+
+.mark_info_text{
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#info_table {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#login_button_menu {
+    border-radius: 10px;
+    background: #0A2896;
+    height: 8%;
+    width: 90%;
+    border: none;
+    margin-left: 5%;
+    margin-top: 2%;
+
+    color: #FFF;
+    font-family: VTB Group;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#registration_button{
+    margin-left: 5%;
+    margin-top: 2%;
+    color: #0A2896;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+
+
+.list_of_locations{
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.list_of_locations::-webkit-scrollbar {
+    width: 0;   
+}
+

@@ -1,0 +1,66 @@
+version: "3.9"
+services:
+
+  api:
+    hostname: internal.api
+    build:
+      dockerfile: backend/api/Dockerfile
+      context: ./
+    env_file:
+      - ./.cfg/.auth.env
+    networks:
+      - bot-net
+
+    tty: true
+    stdin_open: true
+
+
+  frontend:
+    hostname: external.web
+    build:
+      dockerfile: frontend/Dockerfile
+      context: ./
+    env_file:
+      - ./.cfg/.auth.env
+    networks:
+      - bot-net
+    links:
+      - api
+
+    tty: true
+    stdin_open: true
+
+  web-nginx:
+    image: nginx:latest
+    build:
+      dockerfile: backend/nginx/Dockerfile
+    volumes:
+      - ./backend/nginx:/etc/nginx/conf.d
+    networks:
+      - bot-net
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - api
+      - frontend
+
+volumes:
+
+  sys-nginx-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./backend/nginx
+      o: bind
+
+
+networks:
+
+  bot-net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.169.1.0/24
+          gateway: 192.169.1.1

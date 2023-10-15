@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: VTB Group;
+    src: url('VTB Group Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+button#logo{
+    
+    margin: 0% 4% 0% 4%;
+    align-self: center;
+    border: none;
+    background-color: #FFF;
+}
+
+
+html, body, main{
+    height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    background-color: #33539B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu5 {
+    display: none;
+}
+
+#back_button {
+    margin-top: 2%;
+    margin-left: 5%;
+    border: none;
+    background-color: #FFF;
+}
+
+.adress_text1 {
+    margin-top: 3%;
+    margin-left: 5%;
+
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.time_text1{
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+}
+
+#load_info {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#green_mark_1 {
+    border: 0;
+    background-color: #FFF;
+}
+
+#load_info_text {
+    color: #000;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#distance_info {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#distance_info_text {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+
+#distance_info_km {
+    color: #33539B;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    letter-spacing: 0.36px;
+}
+
+#sysanin {
+    margin-top: 3%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#sysanin_text {
+    margin-left: 5%;
+    color: #000;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+}
+
+/* свитч ниже --------------------------------------------*/
+
+#place_order {
+    border: none;
+    margin-top: 4%;
+    margin-left: 5%;
+    width: 90%;
+    height: 10%;
+    border-radius: 10px;
+    background: #0A2896;
+
+    color: #FFF;
+    font-family: VTB Group;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+}
+
+
+
+#acccount_button1{
+    border: none;
+    margin-left: 5%;
+    margin-top: 5%;
+    width:90%;
+
+    background-color: #FFF;
+}
+
+#account_url1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#name_text1{
+    color: #000;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+}
+
+#bonus_points1{
+    margin-left: 5%;
+    margin-top: 1%;
+
+    color: #33539B;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#exit_button1{
+    margin-left: 5%;
+    margin-top: 3%;
+
+    color: #0A2896;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VTB-MAP v0.001a</title>
+    <link rel="stylesheet" type="text/css" href="static/MainPage1Styles.css"/>
+    <link rel="stylesheet" type="text/css" href="static/MainPage2Styles.css"/>
+    <link rel="stylesheet" type="text/css" href="static/MainPage3Styles.css"/>
+    <link rel="stylesheet" type="text/css" href="static/MainPage4Styles.css"/>
+    <link rel="stylesheet" type="text/css" href="static/MainPageInfoStyles.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a145309c-4585-4379-ac1b-c3fe5e9bdbf7&lang=ru_RU"
+            type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div id='container'>
+        <button id='logo'><img src="static/image/vtb_bank_logo.svg"></button>
+    </div>
+</header>
+
+<main>
+    <div class='map' id='map'></div>
+    <div id="on_map">
+        <!-- Меню слева с кнопкой войти -->
+        <div class="menu_map" id="menu1">
+            <div id='search_line'>
+                <input type="text" value="Адрес" id="adress_input"> </input>
+                <button id="settings"><img src="static/image/filters.svg"></button>
+            </div>
+
+            <div id='place_line'>
+                <button id="office"> Отделения</button>
+                <button id="cash_machine"> Банкоматы</button>
+            </div>
+
+            <div class="list_of_locations">
+                <p class="less_then5">Непредвиденная ошибка</p>
+            </div>
+
+            <table id="info_table">
+                <tr>
+                    <td>
+                        <div class="mark_info">
+                            <img src="static/image/green_mark_small.svg">
+                            <p class='mark_info_text'>- меньше 5 баллов загруженности</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mark_info">
+                            <img src="static/image/yellow_mark_small.svg">
+                            <p class='mark_info_text'>- 5 баллов загруженности</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="mark_info">
+                            <img src="static/image/red_mark_small.svg">
+                            <p class='mark_info_text'>- больше 5 баллов загруженности</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mark_info">
+                            <img src="static/image/grey_mark_small.svg">
+                            <p class='mark_info_text'>- отделение больше не работает </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <button id="login_button_menu" onclick="showReg();">Войти</button>
+
+            <a id="registration_button">Зарегистрироваться</a>
+        </div>
+
+        <!-- Окно ввода логина пароля -->
+
+        <div class="menu" id="menu2">
+            <h1 id="h1_login_text">Вход в личный кабинет</h1>
+            <input type="text" id="login" value="Логин"> </input>
+            <input type="text" id="password" value="Пароль"> </input>
+            <button id="enter_button_last" onclick="enterAcc()"> Войти</button>
+            <div id="kostyl"><a id="forget_password">Забыли пароль?</a></div>
+        </div>
+
+        <!-- Окно выбоhа всяких приколов -->
+
+        <div class="menu" id="menu3">
+            <div id="top_menu">
+                <h1 id="hello_name">Здравствуйте, Егор Владимирович!</h1>
+                <a id="url_account" onclick="backFromMenu();">Перейти в личный кабинет</a>
+            </div>
+            <p id="purpose">Выберите цель похода в банк</p>
+            <div id='menu_buttons_line'>
+                <button class="Blue_Button" id="1"> Кредит</button>
+                <button class="Blue_Button" id="2"> Займ</button>
+                <button class="Blue_Button" id="3"> Рефинансирование</button>
+                <button class="Blue_Button" id="4"> Вклад</button>
+                <button class="Blue_Button" id="5"> Инвестиции</button>
+                <button class="Blue_Button" id="6"> Лизинг</button>
+                <button class="Blue_Button" id="7"> Ипотека</button>
+                <button class="Blue_Button" id="8"> Выпуск пластиковых карт</button>
+            </div>
+
+
+            <div id='arrangement_line_text'>
+                <p id="arrangement_date">Выберите удобную дату и время для похода в банк</p>
+                <p id="arrangement_place">Выберите банкомат, в котором хотите получить услугу</p>
+            </div>
+
+            <div id="comboboxes">
+                <div id="date_time">
+                    <input id="date_combobox" type="date"/>
+                    <input id="time_combobox" type="time"/>
+                </div>
+                <select id="adress_combobox"></select>
+            </div>
+
+            <p id="text_very_long"> После нажатия кнопки “Забронировать” Вам придет сообщение в личный кабинет с данными
+                брони</p>
+            <button id="book_button">Забронировать</button>
+            </select>
+        </div>
+
+        <!-- Окно с пользователем войденным в аккаутн с меню слева -->
+
+        <div class="menu_map" id="menu4">
+            <div id='search_line'>
+                <input type="text" value="Адрес" id="adress_input"> </input>
+                <button id="settings"><img src="static/image/filters.svg"></button>
+            </div>
+
+            <div id='place_line'>
+                <button id="office"> Отделения</button>
+                <button id="cash_machine"> Банкоматы</button>
+            </div>
+
+            <div class="list_of_locations">
+                <p class="less_then5">Непредвиденная ошибка</p>
+            </div>
+
+            <button id="acccount_button">
+                <div id="account_url">
+                    <img src="static/image/icon_acc.svg"></img>
+                    <p id="name_text">Антонов Степан Васильевич</p>
+                </div>
+            </button>
+
+            <p id="bonus_points">Доступно 132 балла</p>
+
+            <button id="book_place_button" onclick="showOptions();">Записаться онлайн</button>
+
+            <a id="exit_button" onclick="exitAcc();">Выйти</a>
+            <div></div>
+        </div>
+
+        <!-- Окно с информацией о месте -->
+
+        <div class="menu_map" id="menu5">
+            <button id="back_button" onclick="backToMenu();"><img src="static/image/backarrow.svg"></button>
+            <p class="adress_text1"> г. Химки, мкр. Планерная, кв-л Спартак, д. 17 </p>
+            <p class="time_text1"> Часы работы: 10:00 - 20:00 </p>
+
+            <div id="load_info">
+                <img src="static/image/green_mark_small.svg" id="green_mark_1">
+                <p id="load_info_text">- отделение открыто</p>
+            </div>
+
+            <div id="distance_info">
+                <p id="distance_info_text">Находится на расстоянии</p>
+                <p id="distance_info_km">3.6 км</p>
+            </div>
+
+            <div id="sysanin">
+                <label class="switch">
+                    <input type="checkbox" id="sysanin_cb">
+                    <span class="slider round"></span>
+                </label>
+                <p id="sysanin_text">Функция SYSанин</p>
+            </div>
+
+            <button id="place_order" onclick="router()">Построить маршрут</button>
+
+            <button id="acccount_button1">
+                <div id="account_url1">
+                        <img src="static/image/icon_acc.svg">
+                    <p id="name_text1">Антонов Степан Васильевич</p>
+                </div>
+            </button>
+
+            <p id="bonus_points1">Доступно 132 балла</p>
+            <a id="exit_button1" onclick="exitAcc2();">Выйти</a>
+        </div>
+    </div>
+</main>
+</body>
+<script src="static/scripts.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: VTB Group;
+    src: url('VTB Group Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+button#logo{
+    margin: 0% 4% 0% 2%;
+    align-self: center;
+    border: none;
+    background-color: #FFF;
+}
+
+
+html, body, main{
+    height: 100%;
+}
+
+
+.map {
+    width: 100%;
+    height: 100%;
+    background-color: #33539B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: none;
+    margin-top: 22%;
+    margin-left: 60%;
+    position: relative;
+    background-color: #FFf;
+    height: 555px;
+    width: 844px;
+    border-radius: 20px;
+    border: 1px solid #0A2896;
+}
+
+#h1_login_text {
+    margin-left: 20%;
+    margin-top: 8%;
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 48px */
+}
+
+#login {
+    margin-top: 4%;
+    height: 10%;
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid #6B7683;
+    background: #FFF;
+    margin-left: 20%;
+    padding-left: 2%;
+
+    color: #ACB6C3;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+}
+
+#password {
+    margin-top: 2%;
+    height: 10%;
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid #6B7683;
+    background: #FFF;
+    margin-left: 20%;
+    padding-left: 2%;
+
+    color: #ACB6C3;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+}
+
+#enter_button_last {
+    margin-top: 4%; 
+    height: 8%;
+    width: 35%;
+    margin-left: 20%;
+    border: none;
+    border-radius: 10px;
+    background: #0A2896;
+
+    color: #FFF;
+    font-family: VTB Group;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#enter_button_last:active{
+    background-color: #081B63;
+}
+
+#kostyl{
+    margin-top: 1%;    
+}
+
+#forget_password{
+    margin-top: 10%;     
+    margin-left: 20%;
+
+    color: #0A2896;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    text-decoration-line: underline;
+}

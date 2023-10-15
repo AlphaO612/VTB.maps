@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: VTB Group;
+    src: url('VTB Group Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+button#logo{
+    margin: 0% 4% 0% 2%;
+    align-self: center;
+    border: none;
+    background-color: #FFF;
+}
+
+
+html, body, main{
+    height: 100%;
+}
+
+
+.map {
+    width: 100%;
+    height: 100%;
+    background-color: #33539B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#top_menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#hello_name {
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 5%;
+    margin-left: 8%;
+    
+}   
+
+#url_account {
+    color: #0A2896;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    text-decoration-line: underline;
+    margin-top: 5.7%;
+    margin-right: 8%;
+}
+
+#purpose {
+    color: #8B8B8B;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    margin-left: 8%;
+    margin-top: 2%;
+}
+
+#menu_buttons_line {
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    margin-top: 2%;
+    overflow-x: scroll;
+      
+    .Blue_Button {
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+      
+}
+
+
+
+#menu_buttons_line::-webkit-scrollbar {
+    width: 0;
+    height: 73px;
+   
+}
+
+.Blue_Button {
+    border: none;
+    border-radius: 30px;
+    background-color: #009FDF;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    padding: 1% 3% 1% 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+.Blue_Button:hover{
+    transform: scale(1.1);
+}
+
+.Blue_Button:active{
+    background-color: #407F98;
+}
+
+
+
+#arrangement_line_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#arrangement_date{
+    color: #0A2973;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    margin-left: 1%;
+}
+
+#arrangement_place{
+    color: #0A2973;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+
+#comboboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#date_time {
+    height: 50px;
+    width: 36%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#date_combobox {
+    padding-left: 5%;
+    padding-right: 3%;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #0A2973;
+    background: #FFF;
+}
+
+#time_combobox {
+    margin-left: 10%;
+    padding-left: 5%;
+    padding-right: 3%;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #0A2973;
+    background: #FFF;
+}
+
+#adress_combobox {
+    width:23%;
+    padding-left: 5%;
+    padding-right: 3%;
+    border-radius: 20px;
+    border: 2px solid #0A2973;
+    background: #FFF;
+}
+
+#text_very_long {
+    margin-top: 6%;
+    margin-left: 5%;
+    color: #8B8B8B;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+#book_button{
+    margin-top: 0%;
+    margin-left: 8%;
+    width:30%;  
+    height: 8%;
+    border: none;
+    border-radius: 10px;
+    background: #0A2896;
+
+    color: #FFF;
+    font-family: VTB Group;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#book_button:active {
+    background-color:  #081B63;
+}
